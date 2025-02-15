@@ -1,101 +1,110 @@
-import Image from "next/image";
+import ContactComp from "@/components/Contact";
+import Project from "../components/Project";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="min-h-screen bg-white px-6 md:px-12">
+      <nav className="flex justify-between items-center py-8">
+        <span className="font-mono text-xl  font-medium">
+          <Link href="/" className="hover:text-accent-blue transition-colors">[ Home ]</Link> 
+        </span>
+        <div className="flex gap-6 text-lg font-medium">
+        <a href={process.env.NEXT_PUBLIC_GOOGLE_DRIVE_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-accent-blue transition-colors">[ Resume ]</a>        </div>
+      </nav>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Section */}
+      <section id="hero" className="mt-20 mb-32 scroll-mt-20">
+        <div className="space-y-6">
+          <span className="font-mono text-xl text-neutral-600">
+            Full Stack Developer · MERN Stack 
+          </span>
+          <h1 className="text-5xl md:text-7xl font-mono font-normal">
+            Mohd <br />
+            Diljan
+          </h1>
+          <p className="text-xl text-neutral-600 max-w-xl">
+            &ldquo;A Full Stack Developer focused on building scalable web applications&rdquo;
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="mb-32 scroll-mt-20">
+        <h2 className="font-mono text-4xl mb-12 font-normal">
+          [ 001 ]
+          <br />
+          Projects
+        </h2>
+        <div className="flex flex-col gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Project
+              number="1"
+              date="04 / NOV / 2024"
+              title="Z-Link : Authentication Skeleton"
+              desc="Z-Link is an authentication skeleton system built with Next.js 15, featuring email verification,Totp auth, Password reset, and Google OAuth integration.
+              It uses Session Based Authentication and JWT for secure authentication."
+              tech={["NextJS", "TypeScript", "TailwindCSS", "MongoDB", "Oauth2.0", "ShadcnUI","Netlify"]}
+              links={[
+                { label: "/view", url: "https://z-link.shop/" },
+                { label: "/github", url: "https://github.com/diljan47/nextjs-auth-skeleton-Z-Link" },
+              ]}
+              images={[
+                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739612338/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_2.39.03_PM_dkt50m.png",
+                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739612338/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_2.41.03_PM_a4fsdm.png",
+                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739612338/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_2.41.42_PM_sgxjbq.png",
+                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739612338/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_2.39.41_PM_n6uhwl.png"
+              ]}
+              showImages={true}
+            />
+            <Project
+              number="2"
+              date="30 / DEC / 2024"
+              title="Sol-Checker : Solana Token Security Analyser"
+              desc="Sol-Checker is a solana token analyser that can check the LP Burn,Token Mint, Mutable Authority and the Top Holders of the token, It uses Orca and Raydium Pools for liquidity Analysis"
+              tech={["Web3.js", "Helius", "GrapQL", "NextJS","TailwindCSS","ShadcnUI","Netlify"]}
+              links={[
+                { label: "/view", url: "https://solanachecker.netlify.app/" },
+              ]}
+              images={[
+                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619086/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.00.10_PM_na3h12.png",
+                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619086/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.00.16_PM_asytmw.png",
+                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619086/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_4.59.49_PM_qebof8.png",
+                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619086/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.00.20_PM_kzh4y1.png"
+              ]}
+              showImages={true}
+            />
+          </div>
+          <div className="w-full md:w-1/2 mx-auto">
+            <Project
+              number="3"
+              date="14 / FEB / 2025"
+              title="Minimal & Modern portfolio Design"
+              desc="This is a modern and minimal portfolio website designed in NextJS"
+              tech={["NextJS", "TailwindCSS","Netlify"]}
+              links={[{ label: "/view", url: "https://diljan.netlify.app/" }]}
+              images={[
+                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619400/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.06.07_PM_fgsrqp.png",
+                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619400/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.06.00_PM_ok5k7o.png",
+                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619400/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.06.15_PM_wfybsa.png"
+              ]}
+              showImages={true}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="scroll-mt-20">
+        <ContactComp />
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 text-center text-sm text-neutral-600">
+        
+        <p className="mt-2">Copyright © 2025</p>
+        <p> made by diljan</p>
       </footer>
-    </div>
+    </main>
   );
 }

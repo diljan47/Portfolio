@@ -9,8 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
         foreground: "var(--foreground)",
+        background: "var(--background)",
+        "accent-blue": "var(--accent-blue)",
+      },
+      fontFamily: {
+        mono: ["var(--font-dot-matrix)", "var(--font-space-mono)", "monospace"],
       },
     },
   },
