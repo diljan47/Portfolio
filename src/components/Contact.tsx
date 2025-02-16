@@ -87,12 +87,12 @@ export default function ContactComp() {
           <h2 className="font-semibold">[ CONTACT INFORMATION ]</h2>
           <div className="mt-4 space-y-2 text-neutral-600">
             <p>Trivandrum, Kerala</p>
-            <p className="font-normal">mohddiljan47@gmail.com</p>
+            <p className="font-normal">{process.env.NEXT_PUBLIC_EMAIL}</p>
           </div>
           <div className="mt-6 md:mt-8 space-y-2">
             <p className="font-semibold">[ MY SOCIALS ]</p>
             <a
-              href="https://linkedin.com/in/your-profile"
+              href={process.env.NEXT_PUBLIC_LINKEDIN_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="block hover:text-accent-blue"
@@ -100,7 +100,7 @@ export default function ContactComp() {
               / LinkedIn
             </a>
             <a
-              href="https://github.com/diljan47"
+              href={process.env.NEXT_PUBLIC_GITHUB_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="block hover:text-accent-blue"
