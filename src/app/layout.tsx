@@ -15,8 +15,11 @@ const dotMatrix = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Diljan's Portfolio",
   description: "Personal Portfolio Website",
+  icons: {
+    icon: 'https://res.cloudinary.com/duqupsxnk/image/upload/v1741031043/Screenshot_2025-03-04_at_1.12.24_AM_yfl7ug.png',
+  },
 };
 
 export default function RootLayout({

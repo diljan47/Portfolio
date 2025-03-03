@@ -46,7 +46,7 @@ export default function Home() {
               It uses Session Based Authentication and JWT for secure authentication."
               tech={["NextJS", "TypeScript", "TailwindCSS", "MongoDB", "Oauth2.0", "ShadcnUI","Netlify"]}
               links={[
-                { label: "/view", url: "https://z-link.shop/" },
+                { label: "/view", url: process.env.NEXT_PUBLIC_Z_LINK_LINK || ""},
                 { label: "/github", url: "https://github.com/diljan47/nextjs-auth-skeleton-Z-Link" },
               ]}
               images={[
@@ -64,7 +64,7 @@ export default function Home() {
               desc="Sol-Checker is a solana token analyser that can check the LP Burn,Token Mint, Mutable Authority and the Top Holders of the token, It uses Orca and Raydium Pools for liquidity Analysis"
               tech={["Web3.js", "Helius", "GrapQL", "NextJS","TailwindCSS","ShadcnUI","Netlify"]}
               links={[
-                { label: "/view", url: "https://solanachecker.netlify.app/" },
+                { label: "/view", url: process.env.NEXT_PUBLIC_SOL_CHECKER_LINK || ""},
               ]}
               images={[
                 "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619086/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.00.10_PM_na3h12.png",
@@ -82,7 +82,7 @@ export default function Home() {
               title="Minimal & Modern portfolio Design"
               desc="This is a modern and minimal portfolio website designed in NextJS"
               tech={["NextJS", "TailwindCSS","Netlify"]}
-              links={[{ label: "/view", url: "https://diljan.netlify.app/" }]}
+              links={[{ label: "/view", url: process.env.NEXT_PUBLIC_PORTFOLIO_LINK || "" }]}
               images={[
                 "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619400/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.06.07_PM_fgsrqp.png",
                 "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619400/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.06.00_PM_ok5k7o.png",
