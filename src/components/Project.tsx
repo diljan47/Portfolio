@@ -38,11 +38,11 @@ export default function Project({
     <div className="border border-black">
       <div>
         <div className="p-4 space-y-2">
-          <div className="font-mono text-base md:text-lg text-accent-blue font-normal">
+          <div className="font-medium text-base md:text-lg text-accent-blue font-normal">
             #{number} [ {date} ]
           </div>
           <div className="flex items-center gap-4">
-            <h3 className="font-mono text-xl md:text-2xl leading-tight font-light">
+            <h3 className="font-mono text-xl md:text-2xl leading-tight font-semibold">
               {title}
             </h3>
             <a
@@ -50,7 +50,7 @@ export default function Project({
               target="_blank"
               className="hover:text-accent-blue transition-colors"
             >
-              <GoLinkExternal size={20} className="mb-1 " />
+              <GoLinkExternal size={20} className="mb-1 animate-scale-up-down" />
             </a>
           </div>
           <p className="font-mono text-sm md:text-base leading-tight font-normal">

@@ -27,7 +27,7 @@ export default function ContactComp() {
 
   return (
     <section className="mb-16 md:mb-32">
-      <h2 className="font-mono text-3xl md:text-5xl mb-8 md:mb-12 font-bold">
+      <h2 className="font-mono text-2xl md:text-4xl mb-8 md:mb-12 font-light">
         [ 002 ]<br />
         Get In Touch
       </h2>

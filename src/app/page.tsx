@@ -9,7 +9,7 @@ export default function Home() {
         <span className="font-mono text-xl  font-medium">
           <Link href="/" className="hover:text-accent-blue transition-colors">[ Home ]</Link> 
         </span>
-        <div className="flex gap-6 text-lg font-medium">
+        <div className="flex gap-6 text-lg font-medium cursor-pointer">
         <a href={process.env.NEXT_PUBLIC_GOOGLE_DRIVE_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-accent-blue transition-colors">[ Resume ]</a>        </div>
       </nav>
 
@@ -36,61 +36,72 @@ export default function Home() {
           <br />
           Projects
         </h2>
-        <div className="flex flex-col gap-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Project
-              number="1"
-              date="04 / NOV / 2024"
-              title="Z-Link : Authentication Skeleton"
-              desc="Z-Link is an authentication skeleton system built with Next.js 15, featuring email verification,Totp auth, Password reset, and Google OAuth integration.
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Project
+            number="1"
+            date="11 / JUN / 2025"
+            title="PdParser : AI powered data extraction"
+            desc="PdParser is an AI - powered data extraction tool that can extract schema and data from complex documents and blurry images"
+            tech={["Next.js", "TypeScript", "TailwindCSS", "Supabase", "Nodejs", "Coolify"]}
+            links={[{ label: "/view", url: "https://pdparser.com" }]}
+            images={[
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1749662627/Screenshot_2025-06-11_at_10.48.46_PM_hbsnav.png",
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1749662626/Screenshot_2025-06-11_at_10.49.41_PM_y4n1qg.png",
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1749662627/Screenshot_2025-06-11_at_10.49.59_PM_uueo8i.png",
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1749662627/Screenshot_2025-06-11_at_10.49.08_PM_z8ktia.png",
+            ]}
+            showImages={true}
+          />
+          <Project
+            number="2"
+            date="04 / NOV / 2024"
+            title="Z-Link : Authentication Skeleton"
+            desc="Z-Link is an authentication skeleton system built with Next.js 15, featuring email verification,Totp auth, Password reset, and Google OAuth integration.
               It uses Session Based Authentication and JWT for secure authentication."
-              tech={["NextJS", "TypeScript", "TailwindCSS", "MongoDB", "Oauth2.0", "ShadcnUI","Netlify"]}
-              links={[
-                { label: "/view", url: process.env.NEXT_PUBLIC_Z_LINK_LINK || ""},
-                { label: "/github", url: "https://github.com/diljan47/nextjs-auth-skeleton-Z-Link" },
-              ]}
-              images={[
-                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739612338/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_2.39.03_PM_dkt50m.png",
-                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739612338/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_2.41.03_PM_a4fsdm.png",
-                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739612338/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_2.41.42_PM_sgxjbq.png",
-                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739612338/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_2.39.41_PM_n6uhwl.png"
-              ]}
-              showImages={true}
-            />
-            <Project
-              number="2"
-              date="30 / DEC / 2024"
-              title="Sol-Checker : Solana Token Security Analyser"
-              desc="Sol-Checker is a solana token analyser that can check the LP Burn,Token Mint, Mutable Authority and the Top Holders of the token, It uses Orca and Raydium Pools for liquidity Analysis"
-              tech={["Web3.js", "Helius", "GrapQL", "NextJS","TailwindCSS","ShadcnUI","Netlify"]}
-              links={[
-                { label: "/view", url: process.env.NEXT_PUBLIC_SOL_CHECKER_LINK || ""},
-              ]}
-              images={[
-                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619086/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.00.10_PM_na3h12.png",
-                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619086/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.00.16_PM_asytmw.png",
-                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619086/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_4.59.49_PM_qebof8.png",
-                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619086/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.00.20_PM_kzh4y1.png"
-              ]}
-              showImages={true}
-            />
-          </div>
-          <div className="w-full md:w-1/2 mx-auto">
-            <Project
-              number="3"
-              date="14 / FEB / 2025"
-              title="Minimal & Modern portfolio Design"
-              desc="This is a modern and minimal portfolio website designed in NextJS"
-              tech={["NextJS", "TailwindCSS","Netlify"]}
-              links={[{ label: "/view", url: process.env.NEXT_PUBLIC_PORTFOLIO_LINK || "" }]}
-              images={[
-                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619400/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.06.07_PM_fgsrqp.png",
-                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619400/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.06.00_PM_ok5k7o.png",
-                "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619400/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.06.15_PM_wfybsa.png"
-              ]}
-              showImages={true}
-            />
-          </div>
+            tech={["NextJS", "TypeScript", "TailwindCSS", "MongoDB", "Oauth2.0", "ShadcnUI","Netlify"]}
+            links={[
+              { label: "/view", url: process.env.NEXT_PUBLIC_Z_LINK_LINK || ""},
+              { label: "/github", url: "https://github.com/diljan47/nextjs-auth-skeleton-Z-Link" },
+            ]}
+            images={[
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1739612338/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_2.39.03_PM_dkt50m.png",
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1739612338/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_2.41.03_PM_a4fsdm.png",
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1739612338/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_2.41.42_PM_sgxjbq.png",
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1739612338/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_2.39.41_PM_n6uhwl.png"
+            ]}
+            showImages={true}
+          />
+          <Project
+            number="3"
+            date="30 / DEC / 2024"
+            title="Sol-Checker : Solana Token Security Analyser"
+            desc="Sol-Checker is a solana token analyser that can check the LP Burn,Token Mint, Mutable Authority and the Top Holders of the token, It uses Orca and Raydium Pools for liquidity Analysis"
+            tech={["Web3.js", "Helius", "GrapQL", "NextJS","TailwindCSS","ShadcnUI","Netlify"]}
+            links={[
+              { label: "/view", url: process.env.NEXT_PUBLIC_SOL_CHECKER_LINK || ""},
+            ]}
+            images={[
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619086/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.00.10_PM_na3h12.png",
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619086/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.00.16_PM_asytmw.png",
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619086/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_4.59.49_PM_qebof8.png",
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619086/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.00.20_PM_kzh4y1.png"
+            ]}
+            showImages={true}
+          />
+          <Project
+            number="4"
+            date="14 / FEB / 2025"
+            title="Minimal & Modern portfolio Design"
+            desc="This is a modern and minimal portfolio website designed in NextJS"
+            tech={["NextJS", "TailwindCSS","Netlify"]}
+            links={[{ label: "/view", url: process.env.NEXT_PUBLIC_PORTFOLIO_LINK || "" }]}
+            images={[
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619400/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.06.07_PM_fgsrqp.png",
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619400/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.06.00_PM_ok5k7o.png",
+              "https://res.cloudinary.com/duqupsxnk/image/upload/v1739619400/Portfolio/Personal%20Portfolio%20Images/Screenshot_2025-02-15_at_5.06.15_PM_wfybsa.png"
+            ]}
+            showImages={true}
+          />
         </div>
       </section>
 

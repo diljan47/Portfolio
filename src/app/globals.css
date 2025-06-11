@@ -61,3 +61,16 @@ input, textarea {
     background-image: linear-gradient(to right, var(--retro-pink), var(--retro-blue), var(--retro-green));
   }
 }
+
+@keyframes scale-up-down {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.animate-scale-up-down {
+  animation: scale-up-down 1.5s infinite;
+}
