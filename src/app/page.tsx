@@ -1,6 +1,7 @@
 import ContactComp from "@/components/Contact";
 import Project from "../components/Project";
 import Link from 'next/link';
+import ResendCubeClientWrapper from '@/components/ResendCubeClientWrapper';
 
 export default function Home() {
   return (
@@ -14,8 +15,8 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="mt-20 mb-32 scroll-mt-20">
-        <div className="space-y-6">
+      <section id="hero" className="mt-20 mb-32 scroll-mt-20 flex flex-col md:flex-row items-center md:items-start justify-between">
+        <div className="space-y-6 md:w-1/2 md:pr-8">
           <span className="font-mono text-xl text-neutral-600">
             Full Stack Developer · MERN Stack 
           </span>
@@ -26,6 +27,9 @@ export default function Home() {
           <p className="text-xl text-neutral-600 max-w-xl">
             &ldquo;A Full Stack Developer focused on building scalable web applications&rdquo;
           </p>
+        </div>
+        <div className="hidden md:flex my-20 justify-center items-center min-h-[420px] md:my-0 md:ml-auto md:w-1/2">
+          <ResendCubeClientWrapper />
         </div>
       </section>
 

@@ -9,16 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tweenjs/tween.js": "^18.5.0",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.4.0"
+    "react-icons": "^5.4.0",
+    "three": "^0.157.0",
+    "postprocessing": "^6.37.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.157.0",
+    "@types/tweenjs": "*",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "postcss": "^8",

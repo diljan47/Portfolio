@@ -1,0 +1,64 @@
+/* Portfolio/src/components/ResendCube.module.css */
+
+.canvasContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.godRaysWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)  rotate(-50deg);
+    z-index: 0;
+    width: 100%;
+    height: 100%; /* Changed to 100% for responsiveness */
+    filter: blur(30px); /* Less blur for sharper, more defined rays */
+    pointer-events: none;
+    display: none;
+}
+
+.godRays {
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.15; /* Much more subtle opacity */
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    mix-blend-mode: soft-light; /* Softer blend mode for subtlety */
+}
+
+.face {
+  position: absolute;
+  width: 200px; /* Reverted to original 200px */
+  height: 200px; /* Reverted to original 200px */
+  border: 1px solid #000; /* Example border */
+  background: rgba(0, 0, 0, 0.5); /* Example background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+  opacity: 0.9;
+}
+
+.faceFront  { transform: rotateY(0deg) translateZ(100px); background: #ff0000; } /* Reverted to original 100px */
+.faceBack   { transform: rotateX(180deg) translateZ(100px); background: #00ff00; }
+.faceRight  { transform: rotateY(90deg) translateZ(100px); background: #0000ff; }
+.faceLeft   { transform: rotateY(-90deg) translateZ(100px); background: #ffff00; }
+.faceTop    { transform: rotateX(90deg) translateZ(100px); background: #ff00ff; }
+.faceBottom { transform: rotateX(-90deg) translateZ(100px); background: #00ffff; }
+
+/* You might want to adjust colors or add content to faces */
+.faceFront::before  { content: 'Front'; }
+.faceBack::before   { content: 'Back'; }
+.faceRight::before  { content: 'Right'; }
+.faceLeft::before   { content: 'Left'; }
+.faceTop::before    { content: 'Top'; }
+.faceBottom::before { content: 'Bottom'; }
+
+/* Ensure the transform origin is centered for correct rotation */
+.cube {
+  transform-origin: 50% 50% -100px; /* Reverted to original -100px */
+} 

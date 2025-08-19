@@ -37,7 +37,7 @@ export default function Project({
   return (
     <div className="border border-black">
       <div>
-        <div className="p-4 space-y-2">
+        <div className="p-4 space-y-2 ">
           <div className="font-medium text-base md:text-lg text-accent-blue font-normal">
             #{number} [ {date} ]
           </div>
@@ -53,7 +53,7 @@ export default function Project({
               <GoLinkExternal size={20} className="mb-1 animate-scale-up-down" />
             </a>
           </div>
-          <p className="font-mono text-sm md:text-base leading-tight font-normal">
+          <p className="font-mono text-sm md:text-base leading-tight font-normal min-h-[100px]">
             {desc}
           </p>
         </div>
